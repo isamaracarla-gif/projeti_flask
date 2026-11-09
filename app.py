@@ -15,9 +15,9 @@ def sobre():
 def ola(nome):
     return render_template("ola.html", nome=nome)
 
-#@app.route("/idade/<int:idade>")
-#def idade(idade):
-    #return render_template("idade.html", idade=idade)
+@app.route("/idade/<int:idade>")
+def idade(idade):
+    return render_template("idade.html", idade=idade)
 
 @app.route("/disciplinas")
 def disciplinas():
@@ -25,6 +25,10 @@ def disciplinas():
              "Redes", "Inglês Técnico"]
     return render_template("disciplinas.html",
                            disciplinas=lista)
+
+@app.route("/tabuada/<int:n>")
+def tabuada(n):
+    return render_template("tabuada.html", n=n)
 
 
 
