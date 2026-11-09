@@ -11,11 +11,20 @@ def index():
 def sobre():
     return render_template("sobre.html")
 
+@app.route("/ola/<nome>")
+def ola(nome):
+    return render_template("ola.html", nome=nome)
 
+#@app.route("/idade/<int:idade>")
+#def idade(idade):
+    #return render_template("idade.html", idade=idade)
 
-
-
-
+@app.route("/disciplinas")
+def disciplinas():
+    lista = ["Programação Web", "Banco de Dados",
+             "Redes", "Inglês Técnico"]
+    return render_template("disciplinas.html",
+                           disciplinas=lista)
 
 
 
