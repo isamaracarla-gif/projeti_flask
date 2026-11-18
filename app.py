@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import aluno_service
+import curso_service
 app = Flask(__name__)
-
 
 @app.route("/")
 def index():
@@ -38,6 +38,11 @@ def tabuadas():
 def listar_alunos():
     alunos = aluno_service.listar()
     return render_template("aluno/listar.html", alunos=alunos)
+
+@app.route("/curso/")
+def listar_curso():
+    curso_service = curso_service.listar()
+    return render_template("curso/listar.html", cursos=curso)
 
 
 
