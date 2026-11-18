@@ -34,6 +34,10 @@ def tabuada(n):
 def tabuadas():
     return render_template("tabuadas.html")
 
+@app.route("/aluno/")
+def listar_alunos():
+    alunos = aluno_service.listar()
+    return render_template("aluno/listar.html", alunos=alunos)
 
 
 
