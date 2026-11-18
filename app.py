@@ -40,9 +40,9 @@ def listar_alunos():
     return render_template("aluno/listar.html", alunos=alunos)
 
 @app.route("/curso/")
-def listar_curso():
-    curso_service = curso_service.listar()
-    return render_template("curso/listar.html", cursos=curso)
+def listar_cursos():
+    cursos = curso_service.listar()
+    return render_template("curso/listar.html", cursos=cursos)
 
 
 
