@@ -19,6 +19,6 @@ def cadastrar(nome, telefone, cidade):
         ultimo = lista_aluno[-1]
         novo_id = ultimo["id"] + 1
     aluno = {"id": novo_id, "nome": nome,
-             "telefone": telefone, "cidade": cidade}
+             "telefone": telefone}
     lista_aluno.append(aluno)
     return aluno
