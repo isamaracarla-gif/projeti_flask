@@ -5,6 +5,8 @@ lista_aluno = [
      "telefone": "(86) 99999-0002", "cidade": "Timon"},
     {"id": 3, "nome": "Carla Mendes",
      "telefone": "(86) 99999-0003", "cidade": "Parnaíba"},
+    {"id": 4, "nome": "Daniel Freitas",
+          "telefone": "(86) 99999-0004", "cidade": "Pinheirinho do Norte"},
 ]
 def listar():
     return lista_aluno
