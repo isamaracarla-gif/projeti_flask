@@ -58,6 +58,10 @@ def salvar_aluno():
         aluno_service.cadastrar(nome, telefone, cidade)
     return redirect("/aluno/")
 
+@app.route("/aluno/novo")
+def novo_aluno():
+    return render_template("aluno/form.html", aluno=None)
+
 @app.route("/curso/salvar", methods=["POST"])
 def salvar_curso():
     id_curso = request.form["id"]
