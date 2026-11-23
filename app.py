@@ -58,6 +58,15 @@ def salvar_aluno():
         aluno_service.cadastrar(nome, telefone, cidade)
     return redirect("/aluno/")
 
+@app.route("/curso/salvar", methods=["POST"])
+def salvar_curso():
+    id_curso = request.form["id"]
+    nome = request.form["nome"]
+    area = request.form["area"]
+    if id_curso == "":
+       curso_service.cadastrar(nome, area)
+    return redirect("/curso/")
+
 
 
 
