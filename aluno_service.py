@@ -11,7 +11,7 @@ lista_aluno = [
 def listar():
     return lista_aluno
 
-def cadastrar(nome, telefone, cidade):
+def cadastrar(nome, telefone):
     # Sem banco de dados: o novo id é o id do último aluno + 1
     if len(lista_aluno) == 0:
         novo_id = 1
