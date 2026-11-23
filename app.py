@@ -3,7 +3,7 @@ import aluno_service
 import curso_service
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/") 
 def index():
     return render_template("index.html", titulo="Minha primeira aplicação Flask")
 
