@@ -32,11 +32,11 @@
               <div class="mb-3">
                 <label for="area" class="form-label">Área</label>
                 <input type="text" class="form-control" id="area" name="area"
-                       value="{{ curso.area if curso else '' }}" required>
+                       value="{{ curso.area if area else '' }}" required>
               </div>
 
               <button type="submit" class="btn btn-primary">Salvar</button>
-              <a href="/aluno/" class="btn btn-outline-secondary">Cancelar</a>
+              <a href="/curso/" class="btn btn-outline-secondary">Cancelar</a>
 
             </form>
           </div>
