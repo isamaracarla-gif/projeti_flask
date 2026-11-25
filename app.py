@@ -86,6 +86,19 @@ def salvar_disciplina():
        disciplina_service.cadastrar(nome, carga, semestre)
     return redirect("/disciplina/")
 
+@app.route("/disciplina/novo")
+def novo_disciplina():
+    return render_template("disciplina/form.html",disciplina=None)
+
+@app.route("/professor/salvar", methods=["POST"])
+def salvar_professor():
+    id_professor = request.form["id"]
+    nome = request.form["nome"]
+    e-mail = request.form["email"]
+    titulação = request.form["titulação"]
+    if id_professor == "":
+       professor.service.cadastrar(nome, e-mail, titulação)
+    return redirect("/disciplina/")
 
 
 
