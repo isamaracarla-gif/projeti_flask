@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import aluno_service
 import curso_service
+import disciplina_service
 app = Flask(__name__)
 
 @app.route("/") 
