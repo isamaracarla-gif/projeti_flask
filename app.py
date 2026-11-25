@@ -1,7 +1,10 @@
+import email
+
 from flask import Flask, render_template, request, redirect
 import aluno_service
 import curso_service
 import disciplina_service
+import professor_service
 app = Flask(__name__)
 
 @app.route("/") 
@@ -86,19 +89,19 @@ def salvar_disciplina():
        disciplina_service.cadastrar(nome, carga, semestre)
     return redirect("/disciplina/")
 
-@app.route("/disciplina/novo")
-def novo_disciplina():
-    return render_template("disciplina/form.html",disciplina=None)
+@app.route("/professor/novo")
+def novo_professor():
+    return render_template("professor/form.html",professor=None)
 
 @app.route("/professor/salvar", methods=["POST"])
 def salvar_professor():
     id_professor = request.form["id"]
     nome = request.form["nome"]
-    e-mail = request.form["email"]
+    email = request.form["email"]
     titulação = request.form["titulação"]
     if id_professor == "":
-       professor.service.cadastrar(nome, e-mail, titulação)
-    return redirect("/disciplina/")
+      professor_service.cadastrar(nome, email, titulação)
+    return redirect("/professor/")
 
 
 
