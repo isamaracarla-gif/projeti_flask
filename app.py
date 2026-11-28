@@ -98,8 +98,8 @@ def salvar_disciplina():
    #PROFESSOR
 @app.route("/professor/")
 def listar_professor():
-    professor = professor_service.listar()
-    return render_template("professor/listar.html", professor=professor)
+    professores = professor_service.listar()
+    return render_template("professor/listar.html", professor=professores)
 
 @app.route("/professor/novo")
 def novo_professor():
