@@ -78,8 +78,8 @@ def salvar_curso():
 
 @app.route("/disciplina/")
 def listar_disciplina():
-    disciplinas = disciplina_service.listar()
-    return render_template("disciplina/listar.html", disciplinas=disciplinas)
+    disciplina = disciplina_service.listar()
+    return render_template("disciplina/listar.html", disciplina=disciplina)
 
 @app.route("/disciplina/novo")
 def novo_disciplina():
@@ -94,6 +94,11 @@ def salvar_disciplina():
     if id_disciplina == "":
        disciplina_service.cadastrar(nome, carga, semestre)
     return redirect("/disciplina/")
+
+@app.route("/professor/")
+def listar_professor():
+    professor = professor_service.listar()
+    return render_template("professor/listar.html", professor=professor)
 
 @app.route("/professor/novo")
 def novo_professor():
