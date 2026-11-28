@@ -6,17 +6,18 @@ lista_professor = [
     {"id": 3, "nome": "Renato Alves",
      "email": "renato@exemplo.com", "titulação": "Especialista"},
 ]
+
+
 def listar():
     return lista_professor
 
-def cadastrar(nome, email, titulação):
-    # Sem banco de dados: o novo id é o id do último professor + 1
+def cadastrar(nome, carga, semestre):
     if len(lista_professor) == 0:
         novo_id = 1
     else:
         ultimo = lista_professor[-1]
         novo_id = ultimo["id"] + 1
     professor = {"id": novo_id, "nome": nome,
-                 "email": email, "titulação": titulação}
+             "carga": carga, "semestre": semestre}
     lista_professor.append(professor)
     return professor

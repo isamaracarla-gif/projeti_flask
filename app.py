@@ -75,7 +75,7 @@ def salvar_curso():
        curso_service.cadastrar(nome, area)
     return redirect("/curso/")
 
-
+#DISCIPLINA
 @app.route("/disciplina/")
 def listar_disciplina():
     disciplina = disciplina_service.listar()
@@ -95,6 +95,7 @@ def salvar_disciplina():
        disciplina_service.cadastrar(nome, carga, semestre)
     return redirect("/disciplina/")
 
+   #PROFESSOR
 @app.route("/professor/")
 def listar_professor():
     professor = professor_service.listar()
