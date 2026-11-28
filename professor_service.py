@@ -11,13 +11,13 @@ lista_professor = [
 def listar():
     return lista_professor
 
-def cadastrar(nome, carga, semestre):
+def cadastrar(nome, email, titulação):
     if len(lista_professor) == 0:
         novo_id = 1
     else:
         ultimo = lista_professor[-1]
         novo_id = ultimo["id"] + 1
     professor = {"id": novo_id, "nome": nome,
-             "carga": carga, "semestre": semestre}
+             "email": email, "titulação": titulação}
     lista_professor.append(professor)
     return professor
