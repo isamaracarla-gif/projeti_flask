@@ -78,8 +78,8 @@ def salvar_curso():
 #DISCIPLINA
 @app.route("/disciplina/")
 def listar_disciplina():
-    disciplina = disciplina_service.listar()
-    return render_template("disciplina/listar.html", disciplina=disciplina)
+    disciplinas = disciplina_service.listar()
+    return render_template("disciplina/listar.html", disciplinas=disciplinas)
 
 @app.route("/disciplina/novo")
 def novo_disciplina():
@@ -99,7 +99,7 @@ def salvar_disciplina():
 @app.route("/professor/")
 def listar_professor():
     professores = professor_service.listar()
-    return render_template("professor/listar.html", professor=professores)
+    return render_template("professor/listar.html", professores=professores)
 
 @app.route("/professor/novo")
 def novo_professor():
