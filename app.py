@@ -75,6 +75,12 @@ def salvar_curso():
        curso_service.cadastrar(nome, area)
     return redirect("/curso/")
 
+
+@app.route("/disciplina/")
+def listar_disciplina():
+    disciplinas = disciplina_service.listar()
+    return render_template("disciplina/listar.html", disciplinas=disciplinas)
+
 @app.route("/disciplina/novo")
 def novo_disciplina():
     return render_template("disciplina/form.html",disciplina=None)
